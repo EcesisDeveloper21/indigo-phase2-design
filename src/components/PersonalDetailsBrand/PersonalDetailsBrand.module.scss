@@ -1,0 +1,298 @@
+.personal_details_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background: url("../../assets/images/personalDetailsBrands.png");
+  background-attachment: fixed;
+  background-size: cover;
+  position: fixed;
+  overflow: auto;
+  overflow: auto;
+  @media (max-width: 1124px) {
+    align-items: start;
+  }
+  @media (max-width: 860px) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  @media (max-width: 640px) {
+    height: 100%;
+  }
+  .personal_details_content_wrapper {
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+    max-height: 700px;
+    padding: 0 0 110px 75px;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: left;
+    div {
+      margin-top: auto;
+    }
+    @media (max-width: 1024px) {
+      padding: 0 0 110px 40px;
+    }
+    @media (max-width: 860px) {
+      max-height: max-content;
+      padding: 30px;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.2);
+    }
+    @media (max-width: 640px) {
+      padding: 15px;
+    }
+    h2 {
+      font-family: "sf_pro_textbold";
+
+      color: #ffffff;
+      font-size: 70px;
+      @media (max-width: 1024px) {
+        font-size: 50px;
+      }
+      @media (max-width: 768px) {
+        br {
+          display: none;
+        }
+      }
+      @media (max-width: 640px) {
+        font-size: 36px;
+        br {
+          display: none;
+        }
+      }
+    }
+    p {
+      font-size: 24px;
+      color: #ffffff;
+      width: 100%;
+      strong {
+        font-family: "sf_pro_textbold";
+      }
+      @media (max-width: 640px) {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.tell_us_about_wrapper {
+  background: #faf0e6;
+  width: 646px;
+  margin: 0 20px 0 auto;
+  padding: 53px 53px 37px 45px;
+  @media (max-width: 860px) {
+    width: 100%;
+    margin: 0;
+    padding: 30px;
+  }
+  @media (max-width: 640px) {
+    padding: 15px 15px 25px;
+  }
+  h1 {
+    font-family: "sf_pro_textbold";
+    color: #000000;
+    font-size: 24px;
+    padding-bottom: 50px;
+    margin-bottom: 0;
+    @media (max-width: 640px) {
+      padding-bottom: 15px;
+    }
+  }
+  form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 19px;
+    row-gap: 18px;
+    text-align: left;
+    @media (max-width: 640px) {
+      grid-template-columns: repeat(1, 1fr);
+
+    }
+   
+  }
+}
+.agree_terms{
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  @media (max-width: 640px) {
+    grid-column-end: span 1;
+
+  }
+  input[type="checkbox"] {
+    display: none;
+  }
+  label {
+    div {
+      font-family: "sf_pro_textsemibold";
+      padding: 5px 0 0 10px;
+      color: #777777;
+      font-size: 10px;
+      p{
+        margin: 0;
+        &+p{
+          padding-top: 5px;
+        }
+      }
+    }
+  }
+  input[type="checkbox"] + label {
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    a {
+      color: #4043b4;
+      text-decoration: underline;
+      transition: 0.4s;
+      &:hover {
+        color: #000;
+      }
+    }
+    .check {
+      display: inline-block;
+      border: 2px solid #d5d5d5;
+      width: 25px;
+      height: 25px;
+      position: relative;
+      border-radius: 6px;
+      max-width: 25px;
+      flex: 0 0 25px;
+      background: #ffffff;
+    }
+  }
+  input[type="checkbox"]:checked + label {
+    .check {
+      &:after {
+        content: "";
+        display: inline-block;
+        font-size: 0.8em;
+        width: 17px;
+        height: 17px;
+        line-height: 19px;
+        background: #fed07a;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        border-radius: 5px;
+      }
+    }
+  }
+  :global(.btn-primary) {
+    min-width: 140px;
+    max-width: 140px;
+    flex:0 0 140px;
+    min-height: 35px;
+    font-family: 'sf_pro_textmedium';
+    padding: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    text-align: center;
+    color: #5d5d5d;
+    border: solid 1px #fed07a;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: ease-in all 200ms;
+    background: #fed07a;
+    margin-top: 18px;
+  }
+}
+
+:global(.personal_details_form) {
+  :global(.form-label) {
+    font-size: 12px;
+    font-family: "sf_pro_textsemibold";
+    color: #777777;
+    margin-bottom: 4px;
+    width: 100%;
+    text-align: left;
+  }
+  :global(.form-control),
+  :global(.form-select) {
+    height: 34px;
+    border: 1px solid #777777;
+    background-color: transparent !important;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 8px 13px;
+    &:focus {
+      border-color: #777777;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+  :global(.is-valid) {
+    background-image: url("../../assets/images/validTick.svg");
+    background-repeat: no-repeat;
+    border: 1px solid #777777;
+    background-size: 11px;
+    background-position: right calc(12px + 0.1875rem) center;
+    &:focus {
+      border-color: #777777;
+      box-shadow: none;
+      outline: none;
+      background-color: transparent;
+    }
+  }
+  :global(.form-select) {
+    background-image: url("../../assets/images/selectDropdown.svg") !important;
+    background-size: 10px 6px;
+    background-color: transparent !important;
+    background-repeat: no-repeat !important;
+    background-position: right 16px center !important;
+  }
+  :global(.form-text) {
+    font-size: 9px;
+    color: #777777;
+    margin-top: 2px;
+    width: 100%;
+    line-height: normal;
+    float: left;
+  }
+  :global(.input-group) {
+    border: 1px solid #777777;
+    border-radius: 4px;
+    align-items: center;
+    input {
+      border: none;
+    }
+    :global(.input-group-text) {
+      background-color: transparent !important;
+      border: none;
+      height: 34px;
+      position: relative;
+      font-size: 12px;
+      &:before {
+        content: "";
+        width: 1px;
+        height: 30px;
+        background: #c1c1c1;
+        position: absolute;
+        right: 0;
+      }
+    }
+    .form-control {
+      border: none;
+    }
+    button {
+      padding: 0;
+      height: auto;
+      min-height: 20px;
+      min-width: 64px;
+      border: none;
+      line-height: normal;
+      font-size: 10px;
+      font-family: "sf_pro_textmedium";
+      background: #fed07a;
+      color: #777777;
+      border-radius: 4px !important;
+      text-align: Center;
+      margin-right: 7px;
+    }
+  }
+}
