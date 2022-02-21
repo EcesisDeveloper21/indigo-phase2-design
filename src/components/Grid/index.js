@@ -1,64 +1,68 @@
-import React, { useState } from "react";
-import Paper from "@mui/material/Paper";
-import {
-  SelectionState,
-  PagingState,
-  IntegratedPaging,
-  IntegratedSelection,
-} from "@devexpress/dx-react-grid";
-import {
-  Grid,
-  Table,
-  TableHeaderRow,
-  TableSelection,
-  PagingPanel,
-} from "@devexpress/dx-react-grid-material-ui";
-
-
-export default () => {
-  const [columns] = useState([
-    { name: "name", title: "Name" },
-    { name: "gender", title: "Gender" },
-    { name: "city", title: "City" },
-    { name: "car", title: "Car" },
-  ]);
-  const [rows, setRows] = useState([
-    {
-      name: "ajay",
-      gender: "male",
-      city: "sby",
-      car: "polo",
+import * as React from 'react';
+import { DataGrid } from '@mui/x-data-grid';
+import { makeStyles } from "@material-ui/core/styles";
+const useStyles = makeStyles((theme) => ({
+  root: {
+    border: 'none',
+    '& .paxton-table--row': {
+      border: 'none',
+      marginTop: "15px",
+      marginBottom: theme.spacing(1),
+      backgroundColor: "blue",
     },
-    {
-      name: "james",
-      gender: "male",
-      city: "any",
-      car: "audi",
-    }
-  ]);
+    '& .paxton-table--cell': {
+      border: 'none',
+    },
+  },
+}));
+const columns = [
+  { field: 'id', headerName: 'ID', width: 70 },
+  { field: 'firstName', headerName: 'First name', width: 130 },
+  { field: 'lastName', headerName: 'Last name', width: 130 },
+  {
+    field: 'age',
+    headerName: 'Age',
+    type: 'number',
+    width: 90,
+  },
+  {
+    field: 'fullName',
+    headerName: 'Full name',
+    description: 'This column has a value getter and is not sortable.',
+    sortable: false,
+    width: 160,
+    valueGetter: (params) =>
+      `${params.row.firstName || ''} ${params.row.lastName || ''}`,
+  },
+];
 
-  console.log("");
-  const [selection, setSelection] = useState([]);
+const rows = [
+  { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
+  { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
+  { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
+  { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
+  { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
+  { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
+  { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
+  { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
+  { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+];
+
+
+export default function DataTable() {
+  const classes = useStyles();
 
   return (
-    <div>
-      <span>Total rows selected: {selection.length}</span>
-      <Paper>
-        <Grid rows={rows} columns={columns}>
-          <PagingState defaultCurrentPage={0} pageSize={6} />
-          <SelectionState
-            selection={selection}
-            onSelectionChange={setSelection}
-          />
-          <IntegratedPaging />
-          <IntegratedSelection />
-          <Table />
-          <TableHeaderRow />
-          <TableSelection showSelectAll />
-
-          <PagingPanel />
-        </Grid>
-      </Paper>
+    <div style={{ height: 400, width: '100%' }}>
+      <DataGrid
+        rows={rows}
+        columns={columns}
+        pageSize={5}
+        rowsPerPageOptions={[5]}
+        checkboxSelection
+           className={classes.root}
+           getRowClassName={() => 'paxton-table--row'}
+      />
     </div>
   );
-};
+}
