@@ -37,5 +37,27 @@
     margin-bottom: 10px;
   }
  
+  .status_paid{
+    background-color: lightgreen!important;
+    width:auto!important;
+    height: 30px!important;
+    font-size: 15px!important;
+    color: green!important;
+  }
   
+  .status_unpaid{
+    background-color: lightsalmon!important;
+    width:auto!important;
+    height: 30px!important;
+    font-size: 15px!important;
+    color: orange;
+  }
+  .status_chargeback{
+    background-color: lightcoral!important;
+    width:auto!important;
+    height: 30px!important;
+    font-size: 15px!important;
+    color: red!important;
+  }
 }
+
