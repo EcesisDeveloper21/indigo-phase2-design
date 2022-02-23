@@ -43,7 +43,10 @@ const columns = [
     field: "Action",
     renderCell: (cellValues) => {
       return (
-        <img src={Image} alt="edit" width="30px" height="30px" />
+       
+        <a href="/GridEdit">
+           <img src={Image} alt="edit" width="30px" height="30px" /></a>
+          
 
       );
     },
