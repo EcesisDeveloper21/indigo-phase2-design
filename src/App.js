@@ -8,7 +8,7 @@ import {
 import PersonalDetailsBrandsPage from "./pages/PersonalDetailsBrandsPage";
 import SignupPage from "./pages/SignupPage";
 import Grid from "./pages/Grid";
-
+import GridEdit from "./pages/GridEditPage";
 
 function App() {
   return (
@@ -23,6 +23,9 @@ function App() {
           </Route>
           <Route exact path="/Grid">
             <Grid />
+          </Route>
+          <Route exact path="/GridEdit">
+            <GridEdit/>
           </Route>
         </Switch>
       </Router>
