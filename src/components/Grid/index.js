@@ -33,9 +33,9 @@ const columns = [
   { field: "id", headerName: "Order ID", width: 250 },
   { field: "firstName", headerName: "Date", width: 250 },
   { field: "lastName", headerName: "Billing Name", width: 250 },
-  { field: "total", headerName: "Total", width: 250 },
+  { field: "total", headerName: "Total", width: 150 },
   {
-    field: "Print",
+    field: "Payment Status",width: 250,
     renderCell: (cellValues) => {
       return (
         <Button className="status_paid" variant="contained" style={{ background: 'lightgreen', fontSize: '13px', color: 'green', height: '30px' }} >
@@ -126,7 +126,7 @@ export default function DataTable() {
       <Offcanvas.Body>
         <Nav className="justify-content-end flex-grow-1 pe-3">
           <Nav.Link href="#action1" style={{ color: '#000'}}>Home</Nav.Link>
-          <NavDropdown title="Account" id="offcanvasNavbarDropdown" className="dropdown_Nav" style={{ backgroundColor: '#faf0e6', color:'#000'}}>
+          <NavDropdown title="Manage Orders" id="offcanvasNavbarDropdown" className="dropdown_Nav" style={{ backgroundColor: '#faf0e6', color:'#000'}}>
             <NavDropdown.Item href="#action3" style={{ color: '#000'}}>My Order</NavDropdown.Item>
             <NavDropdown.Divider />
             <NavDropdown.Item href="#action5">
