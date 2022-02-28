@@ -7,8 +7,10 @@ function GridPage() {
   return (
     <>
       {" "}
-      <Header />
+      <Header>
       <Grid />
+
+      </Header>
     </>
   );
 }
