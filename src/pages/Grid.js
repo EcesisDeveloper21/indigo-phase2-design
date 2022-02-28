@@ -8,7 +8,7 @@ function GridPage() {
     <>
       {" "}
       <Header />
-      <Grid />
+      {/* <Grid /> */}
     </>
   );
 }

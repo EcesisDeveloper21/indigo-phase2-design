@@ -6,7 +6,7 @@ import Image from "../../assets/images/edit.png";
 
 import { Modal } from "react-bootstrap";
 import { FormGroup } from "@mui/material";
-
+import { Grid } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,9 +23,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 const columns = [
-  { field: "id", headerName: "Order ID", width: 250 },
-  { field: "firstName", headerName: "Date", width: 250 },
-  { field: "lastName", headerName: "Billing Name", width: 250 },
+  { field: "id", headerName: "Order ID", width: 180 },
+  { field: "firstName", headerName: "Date", width: 180 },
+  { field: "lastName", headerName: "Billing Name", width: 180 },
   { field: "total", headerName: "Total", width: 150 },
   {
     field: "Payment Status",width: 250,
@@ -116,7 +116,7 @@ export default function DataTable() {
         >
           <label
             className="Title_txt"
-            style={{ fontSize: "25px", marginLeft: "20px", fontWeight: "600" }}
+            style={{ fontSize: "25px", marginLeft: "20px", fontWeight: "600", fontFamily: 'sf_pro_textlight'}}
           >
             Manage PO
           </label>
