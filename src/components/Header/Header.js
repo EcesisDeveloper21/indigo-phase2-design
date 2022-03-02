@@ -49,9 +49,9 @@ function Header({ children }) {
               <ProSidebar>
                 <Menu iconShape="square">
                   <MenuItem icon={<FaHome />}>Home</MenuItem>
-                  <SubMenu title="My Manager" icon={<FaRegHeart />}>
-                    <MenuItem>My Order</MenuItem>
-                    <MenuItem>Component 2</MenuItem>
+                  <SubMenu id="sub_menu" title="My Manager" icon={<FaRegHeart />}>
+                    <MenuItem icon={<FaRegHeart />}>My Order</MenuItem>
+                    <MenuItem icon={<FaRegHeart />}>Component 2</MenuItem>
                   </SubMenu>
                 </Menu>
               </ProSidebar>

@@ -23,12 +23,12 @@
     min-width: 100%;
   }
   #header .pro-sidebar.collapsed {
-    width: 80px;
-    min-width: 80px;
+    width: 120px;
+    min-width: 120px;
   }
   #header .pro-sidebar-inner {
     background-color: #faf0e6;
-    box-shadow: 0.5px 0.866px 2px 0px rgba(0, 0, 0, 0.15);
+
   }
   #header .pro-sidebar-inner .pro-sidebar-layout {
     overflow-y: hidden;
@@ -59,6 +59,62 @@
   #header .pro-sidebar-inner .pro-sidebar-layout .active {
     background-color: #faf0e6;
   }
+  
+  .pro-sidebar .pro-menu .pro-menu-item > .pro-inner-item > .pro-icon-wrapper .pro-icon {
+   opacity: 0;
+  }
+
+  
+  .pro-sidebar .pro-menu .pro-menu-item > .pro-inner-item:hover .pro-icon{
+  opacity: 1;
+  transition: all .2s ease-in-out;
+  }
+
+  .pro-sidebar .pro-menu .pro-menu-item > .pro-inner-item:hover .pro-item-content{
+    margin-left: 10px;
+    transition: all .2s ease-in-out;
+    }
+
+
+    #header .pro-sidebar.collapsed .pro-menu .pro-menu-item > .pro-inner-item > .pro-icon-wrapper .pro-icon  {
+      opacity: 1;
+    }
+
+    #header .pro-sidebar.collapsed .pro-sidebar .pro-menu .pro-menu-item > .pro-inner-item .pro-item-content{
+opacity: 0;
+      }
+      #header .pro-sidebar.collapsed .pro-sidebar .pro-menu .pro-menu-item > .pro-inner-item:hover .pro-item-content{
+        opacity: 1;
+              }   
+              
+              
+              #header .pro-sidebar.collapsed .pro-sidebar .pro-menu .pro-menu-item > .pro-inner-item .pro-item-content:hover {
+                opacity: 1;
+            }
+            
+     
+
+              #header .pro-sidebar.collapsed .pro-sidebar .pro-menu .pro-menu-item > .pro-inner-item > .pro-icon-wrapper {
+width: auto;
+min-width: auto;
+margin-left: 0px;
+
+              }
+
+
+
+              #header .pro-sidebar.collapsed .pro-sidebar .pro-menu .pro-menu-item > .pro-inner-item:hover .pro-item-content {
+                margin-left: 0px;
+            }
+
+            #header .pro-sidebar.collapsed .pro-sidebar .pro-menu .pro-menu-item > .pro-inner-item:hover .pro-item-content {
+           font-size: 11px;
+          }
+
+
+            
+
+
   #header .logo {
     padding: 20px;
   }
@@ -66,6 +122,7 @@
   .pro-sidebar .pro-menu > ul > .pro-sub-menu > .pro-inner-list-item {
       background-color: #faf0e6!important;
   }
+
   
   @media only screen and (max-width: 720px) {
     html {
