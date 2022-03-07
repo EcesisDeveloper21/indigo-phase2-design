@@ -3,7 +3,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import { makeStyles } from "@material-ui/core/styles";
 import { Button } from "@material-ui/core";
 import Image from "../../assets/images/edit.png";
-
+import "./Grid.module.scss";
 import { Modal } from "react-bootstrap";
 import { FormGroup } from "@mui/material";
 import { Grid } from "@material-ui/core";
@@ -23,12 +23,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 const columns = [
-  { field: "id", headerName: "Order ID", width: 180 },
-  { field: "firstName", headerName: "Date", width: 180 },
-  { field: "lastName", headerName: "Billing Name", width: 180 },
+  { field: "id", headerName: "Order ID", width: 150 },
+  { field: "firstName", headerName: "Date", width: 150 },
+  { field: "lastName", headerName: "Billing Name", width: 250 },
   { field: "total", headerName: "Total", width: 150 },
   {
-    field: "Payment Status",width: 250,
+    field: "Payment Status", width: 150,
     renderCell: (cellValues) => {
       return (
         <Button
@@ -47,7 +47,7 @@ const columns = [
     },
   },
   {
-    field: "Action",
+    field: "Action",width: 150,
     renderCell: (cellValues) => {
       return (
         <a href="/GridEdit">
@@ -61,7 +61,6 @@ const columns = [
 const rows = [
   { id: 1, lastName: "Snow", firstName: "Jon", age: 35, total: 11 },
   { id: 2, lastName: "Lannister", firstName: "Cersei", age: 42, total: 11 },
-  { id: 3, lastName: "Lannister", firstName: "Jaime", age: 45, total: 11 },
   { id: 4, lastName: "Stark", firstName: "Arya", age: 16, total: 11 },
   { id: 5, lastName: "Targaryen", firstName: "Daenerys", age: null, total: 11 },
   { id: 6, lastName: "Melisandre", firstName: null, age: 150, total: 11 },
@@ -103,42 +102,28 @@ export default function DataTable() {
   const [showModal, setShow] = useState();
   return (
     <>
-      <div style={{ height: "100vh", width: "100%" }}>
-        
 
-        <div
-          className="btn-wrap"
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            marginTop: "50px",
-          }}
+
+      <div className="page-heading">
+        <h1>Manage PO </h1>
+        <Button
+          className="btn_upload"
+          variant="primary"
+          style={{ backgroundColor: "lightgrey", margin: "10px" }}
+          onClick={() => setShow(true)}
         >
-          <label
-            className="Title_txt"
-            style={{ fontSize: "25px", marginLeft: "20px", fontWeight: "600", fontFamily: 'sf_pro_textlight'}}
-          >
-            Manage PO
-          </label>
-          <Button
-            className="btn_upload"
-            variant="primary"
-            style={{ backgroundColor: "lightgrey", margin: "10px" }}
-            onClick={() => setShow(true)}
-          >
-            Upload PO
-          </Button>
-        </div>
-        <DataGrid
-          rows={rows}
-          columns={columns}
-          pageSize={10}
-          rowsPerPageOptions={[10]}
-          checkboxSelection
-          className={classes.root}
-          getRowClassName={() => "paxton-table--row"}
-        />
+          Upload PO
+        </Button>
       </div>
+      <DataGrid
+        rows={rows}
+        columns={columns}
+        pageSize={10}
+        rowsPerPageOptions={[10]}
+        checkboxSelection
+        className={classes.root}
+        getRowClassName={() => "paxton-table--row"}
+      />
 
       <Modal
         show={showModal}

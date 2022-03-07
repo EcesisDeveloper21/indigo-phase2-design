@@ -1,0 +1,126 @@
+
+#sideBar{
+	.pro-sidebar-inner{
+	 background:var(--secondary-color);
+	}
+	.pro-sidebar-header{
+		border: none;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		margin-top: 55px;
+		.closemenu{
+			cursor: pointer;
+			color: var(--primary-color);
+		}
+	}
+	.pro-menu{
+		 ul{
+			 display: flex;
+			 flex-direction: column;
+			 li{
+				 font-family: var(--sf-pro-semiBold);
+				 color: var(--black-color);
+				 font-size: 14px;
+				 display: inline-block;
+				 .pro-icon-wrapper{
+					 background: transparent;
+					 padding: 0;
+					 width: auto;
+					 min-width: auto;
+					 height: auto;
+					 line-height: normal;
+					 margin-right: 0;
+					 width: 0;
+					 transition: all 0.5s ease;
+				 }
+				 .pro-inner-item{
+					 &:hover,
+					 &:focus{
+						 color: var(--primary-color);
+ 
+						 .pro-icon-wrapper{
+							 width: auto;
+							 margin-right: 10px;
+						 }
+					 }
+				 }
+				 ul{
+					 padding-top: 0;
+					 padding-bottom: 0;
+					 padding-left: 30px;
+				 }
+			 
+			 }
+		 }
+		 
+		 .react-slidedown {
+			 background: transparent;
+			 padding: 0;
+		 }
+	}
+	 &.collapsed {
+		 width: 140px;
+		 min-width: 140px;
+		 .pro-inner-item{
+			 justify-content: center;
+			 padding: 8px 0 8px 0;
+			 pointer-events: all;
+			 .pro-item-content{
+				 flex-grow: 0;
+				 flex-shrink: 0;
+				 display: none;
+		   }
+			 &:hover{
+				  .pro-item-content{
+					   display: block;
+				  }
+			 }
+	   }
+	   .pro-inner-list-item{
+		   width: 100%;
+		   min-width: 100%;
+		   max-width: 100%;
+		   position: relative;
+		   ul{
+			   padding-left: 0;
+		   }
+	   }
+		 & + #page-wrapper{
+			  padding-left: 150px;
+			  padding-right: 83px;
+		 }
+		 .pro-sidebar-header{
+			 justify-content: center;
+		 }
+		 
+		 .pro-icon-wrapper{
+			  width: auto!important;
+		 }
+	 .pro-sub-menu{
+		 &:hover{
+			 .pro-inner-list-item{
+				 visibility: visible;
+				 display: block;
+			 }
+		 }
+	 }
+   }
+ }
+ .SidebarMobileView.show{
+	 position: fixed;
+	 z-index: 9999;
+	 .pro-sidebar {
+		 display: block;
+	 
+	 }
+	 .pro-menu{
+		 margin-top: 50px;
+	 }
+	 .pro-sidebar-header{
+		 display: none!important;
+	 }
+	 .overlay{
+		 display: block;
+	 }
+ }

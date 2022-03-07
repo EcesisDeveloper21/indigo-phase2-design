@@ -2,6 +2,13 @@ import React from "react";
 import { Form, FormControl, InputGroup, Button } from "react-bootstrap";
 
 import Style from "./PersonalDetailsBrand.module.scss";
+import Select from 'react-select'
+const options = [
+  { value: 'chocolate', label: 'Chocolate' },
+  { value: 'strawberry', label: 'Strawberry' },
+  { value: 'vanilla', label: 'Vanilla' }
+]
+
 function PersonalDetailsBrand() {
   return (
     <div className={Style.personal_details_wrapper}>
@@ -17,6 +24,7 @@ function PersonalDetailsBrand() {
       </div>
       <div className={Style.tell_us_about_wrapper}>
         <h1>Please tell us about yourself</h1>
+
         <Form className="personal_details_form">
           <Form.Group>
             <Form.Label>First name</Form.Label>
@@ -50,19 +58,14 @@ function PersonalDetailsBrand() {
           </Form.Group>
           <Form.Group>
             <Form.Label>Last name</Form.Label>
-            <Form.Select aria-label="Default select example">
-              <option>Select..</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </Form.Select>
+            <Select options={options} className="customSelect" />
+
           </Form.Group>
           <Form.Group>
             <Form.Label htmlFor="basic-url">E-mail</Form.Label>
             <InputGroup>
               <FormControl
                 placeholder="Email"
-                value="Alice_p@superuser.com"
                 value="Alice_p@superuser.com"
               />
               <Button>Send OTP</Button>

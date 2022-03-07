@@ -296,3 +296,46 @@
     }
   }
 }
+:global(.customSelect){
+  
+  :global([class*="-control"]){
+    border: 1px solid #777777;
+    border-color:#777777!important;
+    background-color: transparent !important;
+    border-radius: 4px;
+    height: 36px;
+    min-height: 36px;
+    font-size: 12px;
+    box-shadow: none!important;
+  }
+  :global([class*="-ValueContainer"]){
+    padding: 0 8px;
+  }
+  :global([class*="-indicatorSeparator"]){
+    display: none;
+  }
+  :global([class*="-menu"]){
+    box-shadow: none;
+    margin-top: 2px;
+    overflow: hidden;
+  }
+  :global([class*="-MenuList"]){
+    padding: 0;
+    font-size: 14px;
+  }
+  :global([class*="-option"]){
+      background-color: #fed07a;
+      color: #5d5d5d;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.30);
+      cursor: pointer;
+  }
+  :global([class*="-option"]:hover),
+  :global([class*="-option"]:active){
+    background-color: #5d5d5d;
+    color:#fed07a ;
+  }
+  :global([class*="-option"]:focus){
+    background-color: #fed07a;
+    color: #5d5d5d;
+  }
+}

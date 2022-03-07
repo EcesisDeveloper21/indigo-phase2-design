@@ -8,15 +8,14 @@
   margin-left: 0;
 }
 ::-moz-selection {
-  background: #fed07a;
+  background: transparent;
 }
 
 ::selection {
-  background: #fed07a;
+  background:transparent;
 }
 body {
   background-color: #faf0e6;
-  font-family: "SFProText" !important;
 }
 li {
   list-style: none;
@@ -1855,6 +1854,7 @@ input[type="number"] {
 /* width */
 ::-webkit-scrollbar {
   width: 5px;
+  height: 5px;
 }
 
 /* Track */
@@ -1864,7 +1864,7 @@ input[type="number"] {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #ffd279;
+  background: #dba46f;
 }
 
 /* Handle on hover */
@@ -9591,7 +9591,7 @@ section.wishlist-section.second.third .Card .strip {
   max-height: 230px;
   margin-bottom: 40px;
 }
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
 }
 #subscription_brand_page
@@ -9602,7 +9602,7 @@ section.wishlist-section.second.third .Card .strip {
   .benefits {
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
+} */
 #subscription_brand_page
   .upgrade_plan_section_subscriptions
   .wrapper
@@ -11173,24 +11173,7 @@ display: none;
 .nine-tb{ padding-top: 1rem;
   padding-bottom: 1rem; }
 
-::-webkit-scrollbar {
-  width: 10px;
-}
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #faf0e6;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #faf0e6;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #faf0e6;
-}
 
 .back-arrow-linl{ position: absolute; left: 35px; }
 .arrw-inn{ background: #000;

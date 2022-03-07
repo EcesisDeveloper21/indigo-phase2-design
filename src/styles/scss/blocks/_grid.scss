@@ -14,3 +14,64 @@ body{
     margin-bottom: 10px;
   }
 }
+.status_paid,
+.status_unpaid,
+.status_chargeback{
+    border-radius: 50px!important;
+    box-shadow: none!important;
+    height: auto!important;
+    min-width: auto!important;
+    width: auto!important;
+    padding: 2px 10px 3px!important;
+    text-transform: capitalize!important;
+    line-height: normal!important;
+    font-size: 12px!important;
+    font-family: var(--sf-pro-medium)!important;
+}
+.status_paid{
+  background-color: #d0f8eb!important;
+  width:auto!important;
+  color: #00d696!important;
+}
+
+.status_unpaid{
+  background-color: #fef2df!important;
+  width:auto!important;
+  color: #fcc46f;
+}
+.status_chargeback{
+  background-color: #ffe1e4!important;
+  width:auto!important;
+  color: #ff6e86!important;
+}
+.MuiDataGrid-root{
+  border: none!important;
+  height: calc(100vh - 250px)!important;
+}
+.MuiDataGrid-columnHeader{
+  border: none!important;
+  outline: none!important;
+}
+.MuiTablePagination-displayedRows{
+  margin-bottom: 0;
+}
+.MuiDataGrid-cell{
+  border: none!important;
+  outline: none!important;
+}
+.MuiDataGrid-columnHeaders{
+  border: 1px solid var(--white-color)!important;
+  border-left: 0!important;
+  border-right: 0!important;
+  min-height: 46px!important;
+  max-height: 46px!important;
+  line-height: 46px!important;
+  font-family: var(--sf-pro-semiBold);
+
+}
+.MuiDataGrid-columnSeparator{
+  visibility: hidden;
+}
+.MuiDataGrid-columnHeaderTitleContainer{
+  padding: 0!important;
+}

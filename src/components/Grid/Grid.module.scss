@@ -38,31 +38,35 @@
     margin-bottom: 10px;
   }
  
-  .status_paid{
-    background-color: lightgreen!important;
-    width:auto!important;
-    height: 30px!important;
-    font-size: 15px!important;
-    color: green!important;
-  }
-  
-  .status_unpaid{
-    background-color: lightsalmon!important;
-    width:auto!important;
-    height: 30px!important;
-    font-size: 15px!important;
-    color: orange;
-  }
-  .status_chargeback{
-    background-color: lightcoral!important;
-    width:auto!important;
-    height: 30px!important;
-    font-size: 15px!important;
-    color: red!important;
-  }
  
 }
+.status_paid,
+.status_unpaid,
+.status_chargeback{
+  border-radius: 50px;
+}
+.status_paid{
+  background-color: #d0f8eb!important;
+  width:auto!important;
+  height: 30px!important;
+  font-size: 15px!important;
+  color: #00d696!important;
+}
 
+.status_unpaid{
+  background-color: #fef2df!important;
+  width:auto!important;
+  height: 30px!important;
+  font-size: 15px!important;
+  color: #fcc46f;
+}
+.status_chargeback{
+  background-color: #ffe1e4!important;
+  width:auto!important;
+  height: 30px!important;
+  font-size: 15px!important;
+  color: #ff6e86!important;
+}
 
 .nav-link{
   color: black!important;

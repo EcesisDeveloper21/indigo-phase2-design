@@ -94,3 +94,21 @@ button{
   font-weight: normal;
   font-style: normal;
 }
+:root {
+  /* Color */
+  --primary-color:                               #cb7e33;
+  --secondary-color:                             #faf0e6;
+  --black-color:                                 #000000;
+  --white-color:                                 #ffffff;
+  --grey-color:                                  #434343;
+
+
+  // font-family
+  --sf-pro-light:                                'sf_pro_textlight';
+  --sf-pro-regular:                              'sf_pro_textregular';
+  --sf-pro-medium:                               'sf_pro_textmedium';
+  --sf-pro-semiBold:                             'sf_pro_textsemibold';
+  --sf-pro-bold:                                 'sf_pro_textbold';
+  --sf-pro-heavy:                                'sf_pro_textheavy';
+
+}
