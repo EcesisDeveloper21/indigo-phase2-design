@@ -51,7 +51,7 @@ const columns = [
     renderCell: (cellValues) => {
       return (
         <a href="/GridEdit">
-          <img src={Image} alt="edit" width="30px" height="30px" />
+          <img src={Image} alt="edit" width="18px" height="18px" />
         </a>
       );
     },
@@ -126,6 +126,7 @@ export default function DataTable() {
         </Button>
       </div>
       <DataGrid
+      rowHeight={44}
         rows={rows}
         columns={columns}
         pageSize={10}

@@ -23,8 +23,9 @@
         }
     }
     .nav_profile{
+        z-index: 1;
         position: absolute;
-        right: 0;
+        right: 54px;
         top: 7px;
         @media (max-width: 768px){
             top:5px;

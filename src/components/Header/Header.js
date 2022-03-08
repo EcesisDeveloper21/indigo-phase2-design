@@ -31,57 +31,8 @@ function Header({ children }) {
   };
   return (
     <>
-      <div id="wrapper">
-        <Button
-          onClick={() => setOpen(!open)}
-          aria-controls="example-collapse-text"
-          aria-expanded={open}
-          className="btnToggle"
-        >
-          <FiMenu />
-        </Button>
-        <Collapse in={open}>
-          <div id="example-collapse-text" className="SidebarMobileView">
-            <ProSidebar id="sideBar" collapsed={menuCollapse}  >
-              <SidebarHeader>
-                <div className="closemenu" onClick={menuIconClick}>
-                  {/* changing menu collapse icon on click */}
-                  {menuCollapse ? <FiMenu /> : <FiMenu />}
-                </div>
-              </SidebarHeader>
-              <ProSidebar>
-                <Menu iconShape="square">
-                  <MenuItem icon={<FaHome />}>Home</MenuItem>
-                  <SubMenu title="My Manager" icon={<FaRegHeart />}>
-                    <MenuItem icon={<FaRegHeart />}>My Order</MenuItem>
-                    <MenuItem icon={<FaRegHeart />}>Component 2</MenuItem>
-                  </SubMenu>
-                </Menu>
-              </ProSidebar>
-            </ProSidebar>
-          </div>
-        </Collapse>
-
-        {/* collapsed props to change menu size using menucollapse state */}
-        <ProSidebar id="sideBar" collapsed={menuCollapse}  >
-          <SidebarHeader>
-            <div className="closemenu" onClick={menuIconClick}>
-              {/* changing menu collapse icon on click */}
-              {menuCollapse ? <FiMenu /> : <FiMenu />}
-            </div>
-          </SidebarHeader>
-          <ProSidebar>
-            <Menu iconShape="square">
-              <MenuItem icon={<FaHome />}>Home</MenuItem>
-              <SubMenu title="My Manager" icon={<FaRegHeart />}>
-                <MenuItem icon={<FaRegHeart />}>My Order</MenuItem>
-                <MenuItem icon={<FaRegHeart />}>Component 2</MenuItem>
-              </SubMenu>
-            </Menu>
-          </ProSidebar>
-        </ProSidebar>
-        <div id="page-wrapper">
-          <div className="header">
+    <div style={{width:"100%"}}> 
+    <div className="header">
             <StickyNav length='40' style={{ with: '100%' }}>
               <Navbar bg="#faf0e6" expand={false}>
                 <label
@@ -144,6 +95,59 @@ function Header({ children }) {
               </Navbar>
             </StickyNav>
           </div>
+     </div>
+
+      <div id="wrapper">
+        <Button
+          onClick={() => setOpen(!open)}
+          aria-controls="example-collapse-text"
+          aria-expanded={open}
+          className="btnToggle"
+        >
+          <FiMenu />
+        </Button>
+        <Collapse in={open}>
+          <div id="example-collapse-text" className="SidebarMobileView">
+            <ProSidebar id="sideBar" collapsed={menuCollapse}  >
+              <SidebarHeader>
+                <div className="closemenu" onClick={menuIconClick}>
+                  {/* changing menu collapse icon on click */}
+                  {menuCollapse ? <FiMenu /> : <FiMenu />}
+                </div>
+              </SidebarHeader>
+              <ProSidebar>
+                <Menu iconShape="square">
+                  <MenuItem icon={<FaHome />}>Home</MenuItem>
+                  <SubMenu title="My Manager" icon={<FaRegHeart />}>
+                    <MenuItem icon={<FaRegHeart />}>My Order</MenuItem>
+                    <MenuItem icon={<FaRegHeart />}>Component 2</MenuItem>
+                  </SubMenu>
+                </Menu>
+              </ProSidebar>
+            </ProSidebar>
+          </div>
+        </Collapse>
+
+        {/* collapsed props to change menu size using menucollapse state */}
+        <ProSidebar id="sideBar" collapsed={menuCollapse}  >
+          <SidebarHeader>
+            <div className="closemenu" onClick={menuIconClick}>
+              {/* changing menu collapse icon on click */}
+              {menuCollapse ? <FiMenu /> : <FiMenu />}
+            </div>
+          </SidebarHeader>
+          <ProSidebar>
+            <Menu iconShape="square">
+              <MenuItem icon={<FaHome />}>Home</MenuItem>
+              <SubMenu title="My Manager" icon={<FaRegHeart />}>
+                <MenuItem icon={<FaRegHeart />}>My Order</MenuItem>
+                <MenuItem icon={<FaRegHeart />}>Component 2</MenuItem>
+              </SubMenu>
+            </Menu>
+          </ProSidebar>
+        </ProSidebar>
+        <div id="page-wrapper">
+          
           <div>{children}</div>
         </div>
       </div>
