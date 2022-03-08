@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import { makeStyles } from "@material-ui/core/styles";
 import { Button } from "@material-ui/core";
@@ -103,6 +103,16 @@ export default function DataTable() {
   return (
     <>
 
+<style jsx>{`
+      
+        @media(max-width:767px)
+        {
+          .modal-content {
+            top:44px
+          }
+        }
+        
+      `}</style>
 
       <div className="page-heading">
         <h1>Manage PO </h1>

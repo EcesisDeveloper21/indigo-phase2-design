@@ -13,7 +13,7 @@
         padding: 15px 0;
         @media (max-width: 768px){
             justify-content: space-between;
-            padding-left: 40px;
+            padding-left: 84px;
             .Heade_title{
                 align-items: center;
                 span{
@@ -28,6 +28,7 @@
         top: 7px;
         @media (max-width: 768px){
             top:5px;
+            right:-29px;
         }
     }
     .nav_profile{

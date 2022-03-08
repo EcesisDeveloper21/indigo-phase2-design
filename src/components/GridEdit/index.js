@@ -2,10 +2,40 @@ import React, { useState } from "react";
 import { Button } from "@material-ui/core";
 
 function GridEdit() {
+  
 
   return (
-    <div className="wrap" style={{ backgroundColor: 'white', width: '500px', height: '500px',  display: 'flex', alignItems: 'center', margin: 'auto', marginTop:'40px'}}>
-   <div className="edit_wrap" style={{ backgroundColor: 'white', padding:'50px', width:'100%', display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>
+    <>
+
+<style jsx>{`
+        .wrap {
+          background-color: white;
+          width:500px;
+          height:500px;
+          display:flex;
+          align-items:center;
+          margin:auto;
+          margin-top:40px
+        }
+
+        @media(max-width:767px)
+        {
+          .wrap {
+            width:328px
+          }
+        }
+        .edit_wrap{
+          background-color:white;
+          padding:50px;
+          width:100%;
+          display:flex;
+          justify-content:center;
+          flex-direction:column;
+        }
+        
+      `}</style>
+    <div className="wrap" >
+   <div className="edit_wrap" >
 
 <h2>EDIT</h2>
 
@@ -25,6 +55,8 @@ function GridEdit() {
 
    </div>
    </div>
+  
+   </>
   );
 }
 
